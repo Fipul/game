@@ -1,0 +1,124 @@
+.shop {
+    width: 50%;
+    background-color: yellowgreen;
+    margin: 100px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.shop-names{
+    display: block;
+    float: left;
+    line-height: 2em;
+    text-align: left;
+    margin-right: 15px;
+    margin-left: 50px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+.shop-content{
+    display: block;
+    float: right;
+    text-align: right;
+    line-height: 3em;
+    margin-left: 15px;
+    margin-right: 50px;
+    margin-top: 50px;
+    width: 45%;
+    box-sizing: border-box
+}
+
+select{
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 3px;
+    height: 35px;
+    width: 100%;
+    margin-left: 0px;
+    letter-spacing: 0.07em;
+}
+
+select option{
+    padding: 3px;
+}
+
+.cost{
+    display: block;
+    border-top: 1px solid #333;
+    margin: 310px 50px 0px 50px;
+    text-align: left;
+    width: 75%;
+}
+
+.hero {
+    width: 50%;
+    background-color: yellowgreen;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 100px;
+    margin-left: 15px;
+    padding-left: 25px;
+    padding-top: 50px;
+    border-radius: 5px;
+}
+
+.inventory {
+    width: 1024px;
+    height: 768px;
+    background-color: blue;
+    display: flex;
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.helmet {
+    position: absolute;
+    left: 690px;
+}
+
+.gloves {
+    position: absolute;
+    left: 640px;
+    top: 300px;
+    z-index: 5;
+}
+
+.chest {
+    position: absolute;
+    left: 690px;
+    top: 245px;
+    z-index: 1;
+}
+
+.boots {
+    position: absolute;
+    left: 675px;
+    top: 410px;
+    z-index: 2;
+}
+
+.sword{
+    position: absolute;
+    left: 540px;
+    top: 350px;
+    z-index: 3;
+}
+
+.stat-names{
+    float:left;
+    margin-left: 70px;
+    line-height: 1.6em;
+}
+
+.actstats{
+    float: right;
+    margin-left: 30px;
+    margin-right: 200px;
+    line-height: 1.6em;
+}

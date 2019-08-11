@@ -1,0 +1,71 @@
+<div *ngIf="data" class="inventory">
+    <div class="shop"> 
+        <div class="title">SHOP</div>
+       
+        <div class="shop-names">
+          <p>Helmet</p>
+          <p>Gloves</p>
+          <p>Chest</p>
+          <p>Boots</p>
+          <p>Sword</p>
+        </div>
+        <div class="shop-content">
+          <div>            
+            <select class="items" [(ngModel)]="curHelm" (ngModelChange)="recalcStats()">
+              <option [ngValue]="null"></option>
+              <option *ngFor="let helmet of data.equipment.helmets" [ngValue]="helmet">{{helmet.name}}</option>
+            </select>
+          </div>
+          <div>
+            <select class="items" [(ngModel)]="curGloves" (ngModelChange)="recalcStats()">
+              <option [ngValue]="null"></option>
+              <option *ngFor="let gloves of data.equipment.gloves" [ngValue]="gloves">{{gloves.name}}</option>
+            </select>
+          </div>
+          <div>
+            <select class="items" [(ngModel)]="curChest" (ngModelChange)="recalcStats()">
+              <option [ngValue]="null"></option>
+              <option *ngFor="let chest of data.equipment.chests" [ngValue]="chest">{{chest.name}}</option>
+            </select>
+          </div>
+          <div>           
+            <select class="items" [(ngModel)]="curBoots" (ngModelChange)="recalcStats()">
+              <option [ngValue]="null"></option>
+              <option *ngFor="let boots of data.equipment.boots" [ngValue]="boots">{{boots.name}}</option>
+            </select>
+          </div>
+          <div>            
+            <select class="items" [(ngModel)]="curSword" (ngModelChange)="recalcStats()">
+                <option [ngValue]="null"></option>
+                <option *ngFor="let sword of data.equipment.swords" [ngValue]="sword">{{sword.name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="cost">
+          <p>Equipment cost:{{stats.cost}}</p>
+        </div>
+    </div>
+    <div class="hero">
+      <img *ngIf="!curHelm" src="{{data.person.img}}">
+      <img *ngIf="curHelm" src="{{data.person.altimg}}">
+      <img *ngIf="curHelm" src="{{curHelm.img}}" class="helmet">
+      <img *ngIf="curGloves" src="{{curGloves.img}}" class="gloves">
+      <img *ngIf="curChest" src="{{curChest.img}}" class="chest">
+      <img *ngIf="curBoots" src="{{curBoots.img}}" class="boots">
+      <img *ngIf="curSword" src="{{curSword.img}}" class="sword">
+    
+      <div class="stats">
+        <div class="stat-names">
+          <p>Name:<br/>
+            Stats: </p>
+        </div>
+        <div class="actstats">
+          <p>{{data.person.name}}<br/>
+            {{stats.health}}<br/>
+            {{stats.attack}}<br/>
+            {{stats.armor}}</p>
+        </div>
+  
+      </div>
+    </div>
+</div>
